@@ -1,36 +1,13 @@
-# Équilibre Santé — GitHub Pages
+# Équilibre Santé — version statique compilée
 
-Page responsive proposant des repères nutritionnels éducatifs, un choix entre maintien et perte progressive, un calculateur de portions, un répertoire d’aliments à IG bas et dix menus-types.
+Cette version est prête à être servie directement par GitHub Pages, sans Node.js, Vite ni GitHub Actions.
 
-## Publier sur GitHub Pages
+## Corriger le dépôt existant
 
-1. Créez un dépôt GitHub vide, par exemple `equilibre-sante`.
-2. Décompressez cette archive et envoyez tout son contenu à la racine du dépôt.
-3. Dans **Settings → Pages**, choisissez **GitHub Actions** comme source.
-4. Envoyez les fichiers sur la branche `main`. Le workflow publiera automatiquement le site.
+1. Remplacez le fichier `index.html` situé à la racine du dépôt.
+2. Ajoutez le dossier `assets` complet à la racine.
+3. Dans **Settings → Pages**, sélectionnez **Deploy from a branch**.
+4. Choisissez la branche **main** et le dossier **/(root)**, puis enregistrez.
+5. Attendez une à deux minutes, puis rechargez la page sans cache.
 
-L’adresse finale sera généralement :
-
-```text
-https://VOTRE-NOM.github.io/equilibre-sante/
-```
-
-## Développement local
-
-Node.js 22 ou supérieur est recommandé.
-
-```bash
-npm install
-npm run dev
-```
-
-Pour vérifier la version de production :
-
-```bash
-npm run build
-npm run preview
-```
-
-## Avertissement
-
-Le site fournit des estimations éducatives et ne remplace pas un avis médical ou diététique personnalisé.
+Les anciens fichiers `src`, `package.json`, `vite.config.ts` et `tsconfig*.json` peuvent rester dans le dépôt : GitHub Pages les ignorera.
